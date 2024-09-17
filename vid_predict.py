@@ -272,24 +272,9 @@ if __name__ == "__main__":
         img = '/home/luodengyan/tmp/master-红外目标检测/视频/数据集/IRDST_csj/images/8/789.bmp'
         # img = '/home/luodengyan/tmp/master-红外目标检测/视频/数据集/IRDST_csj/images/18/99.bmp'
 
+        
+        # Thanks for your attention! After the paper accept, we will open the details soon.
 
-        img_dir = os.path.dirname(img)
-        frames_num = len(sorted(glob.glob(img_dir + '/*.bmp')))
-        img_num = int(img.split('/')[-1].split('.')[0])  
-
-        clip_list = [] 
-        for i in range(0, frames_num, num_frame):
-            frame_range = list(range(i, i+num_frame))
-            frame_range = np.clip(frame_range, 0, frames_num-1)
-
-            # 找到当前帧在哪个clip中
-            if img_num in frame_range:
-                for j in frame_range:
-                    clip_list.append( os.path.join(img_dir, str(j) +'.bmp' ))
-                
-                # 检索当前帧在当前clip中的位置
-                position = list(frame_range).index(img_num)  
-                break
             
 
         images = [Image.open(item) for item in clip_list]
