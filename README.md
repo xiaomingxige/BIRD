@@ -46,4 +46,4 @@ python vid_map_coco.py
 python vid_predict.py
 ```
 ## Acknowledgements
-This work is based on [SSTNet](https://github.com/UESTC-nnLab/SSTNet). Thank for [UESTC-nnLab](https://github.com/UESTC-nnLab) for sharing the codes.
+This work is based on [SSTNet](https://github.com/UESTC-nnLab/SSTNet). Thank [UESTC-nnLab](https://github.com/UESTC-nnLab) for sharing the codes.
