@@ -142,7 +142,6 @@ class Pred_vid(object):
             #---------------------------------------------------------#
             #   将图像输入网络当中进行预测！
             #---------------------------------------------------------#
-
             outputs_list = self.net(images)  # b, num_frame, 6, h, w
             outputs = [outputs_list[:, position, :, :, :]]
 
@@ -153,7 +152,6 @@ class Pred_vid(object):
             #---------------------------------------------------------#
             outputs = non_max_suppression(outputs, self.num_classes, self.input_shape, image_shape, self.letterbox_image, conf_thres = self.confidence, nms_thres = self.nms_iou)
       
-
             if outputs[0] is None: 
                 return c_image
 
@@ -161,7 +159,6 @@ class Pred_vid(object):
             top_conf    = outputs[0][:, 4] * outputs[0][:, 5]
             top_boxes   = outputs[0][:, :4]
             
-
         #---------------------------------------------------------#
         #   设置字体与边框厚度
         #---------------------------------------------------------#
@@ -198,8 +195,6 @@ class Pred_vid(object):
                 crop_image = c_image.crop([left, top, right, bottom])
                 crop_image.save(os.path.join(dir_save_path, "crop_" + str(i) + ".png"), quality=95, subsampling=0)
                 print("save crop_" + str(i) + ".png to " + dir_save_path)
-
-
 
         #---------------------------------------------------------#
         #   图像绘制
