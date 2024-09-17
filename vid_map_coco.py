@@ -42,7 +42,6 @@ class MAP_vid(object):
         "model_path"        : './logs_DAUB/2024_05_31_08_14_11/ep005-loss9.681-val_loss8.851.pth',   
         "model_path"        : './logs_IRDST/2024_06_01_08_14_16/ep008-loss12.878-val_loss16.862.pth',  
 
-
         "classes_path"      : 'model_data/classes.txt',
 
         "input_shape"       : [544, 544],  
