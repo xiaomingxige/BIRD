@@ -28,8 +28,8 @@ class Pred_vid(object):
         #   验证集损失较低不代表mAP较高，仅代表该权值在验证集上泛化性能较好。
         #   如果出现shape不匹配，同时要注意训练时的model_path和classes_path参数的修改
         #--------------------------------------------------------------------------#
-        "model_path"        : '/data/luodengyan/code/我的红外/视频/循环/test20_加损失函数/logs_DAUB/2024_05_31_08_14_11/ep005-loss9.681-val_loss8.851.pth',   # 0.9785       Precision: 0.9930, Recall: 0.9931, F1: 0.9930  cost of time:87.05s
-        "model_path"        : '/data/luodengyan/code/我的红外/视频/循环/test20_加损失函数/logs_IRDST_no_no/2024_06_01_08_14_16/ep008-loss12.878-val_loss16.862.pth',  # 0.9260 Precision: 0.9669, Recall: 0.9673, F1: 0.9671  cost of time:363.11s
+        "model_path"        : '.logs_DAUB/2024_05_31_08_14_11/ep005-loss9.681-val_loss8.851.pth',   
+        "model_path"        : './logs_IRDST_no_no/2024_06_01_08_14_16/ep008-loss12.878-val_loss16.862.pth',  
 
 
         
@@ -129,7 +129,6 @@ class Pred_vid(object):
         #---------------------------------------------------------#
         image_data  = [resize_image(image, (self.input_shape[1],self.input_shape[0]), self.letterbox_image) for image in images]
         image_data = [np.transpose(preprocess_input(np.array(image, dtype='float32')), (2, 0, 1)) for image in image_data]
-        # (3, 640, 640) -> (3, 16, 640, 640)
         image_data = np.stack(image_data, axis=1)
         #---------------------------------------------------------#
         #   添加上batch_size维度
@@ -222,7 +221,6 @@ class Pred_vid(object):
             # label_size = draw.textsize(label, font)
             label_size = draw.textbbox((125, 20), label, font)
             label = label.encode('utf-8')
-            # print(label, top, left, bottom, right)
             
             if top - label_size[1] >= 0:
                 text_origin = np.array([left, top - label_size[1]])
