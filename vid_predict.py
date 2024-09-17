@@ -265,14 +265,7 @@ if __name__ == "__main__":
     count           = False
     #----------------------------------------------------------------------------------------------------------#
     if mode == "predict":
-        # img = '/home/luodengyan/tmp/master-红外目标检测/视频/数据集/DAUB_csj/DAUB/images/test/data6/254.bmp'
-        # img = '/home/luodengyan/tmp/master-红外目标检测/视频/数据集/DAUB_csj/DAUB/images/test/data15/15.bmp'
-
-
-        img = '/home/luodengyan/tmp/master-红外目标检测/视频/数据集/IRDST_csj/images/8/789.bmp'
-        # img = '/home/luodengyan/tmp/master-红外目标检测/视频/数据集/IRDST_csj/images/18/99.bmp'
-
-        
+        # img = './DAUB/images/test/data6/254.bmp'
         # Thanks for your attention! After the paper accept, we will open the details soon.
 
             
