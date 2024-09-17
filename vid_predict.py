@@ -279,7 +279,7 @@ if __name__ == "__main__":
     elif mode == "video":
         import numpy as np
         from tqdm import tqdm
-        dir_path = '/home/luodengyan/tmp/master-红外目标检测/视频/数据集/DAUB_csj/DAUB/images/test/data6/'
+        dir_path = './DAUB/images/test/data6/'
 
         images = os.listdir(dir_path)
         images.sort(key=lambda x:int(x[:-4]))
