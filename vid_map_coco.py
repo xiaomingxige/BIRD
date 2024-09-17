@@ -173,10 +173,10 @@ if __name__ == "__main__":
     print('cost of time:{:.2f}s'.format(time.time() - start_time))
 
     """
-    CUDA_VISIBLE_DEVICES=1 python vid_map_coco_DAUB.py 
+    CUDA_VISIBLE_DEVICES=0 python vid_map_coco.py 
     
-    CUDA_VISIBLE_DEVICES=1 nohup python -u vid_map_coco.py > test_DUAB.out & 
-    CUDA_VISIBLE_DEVICES=1 nohup python -u vid_map_coco.py > test_IRDST.out & 
+    CUDA_VISIBLE_DEVICES=0 nohup python -u vid_map_coco.py > test_DUAB.out & 
+    CUDA_VISIBLE_DEVICES=0 nohup python -u vid_map_coco.py > test_IRDST.out & 
     """
     print('PID:', os.getpid())
     ##########################################################
