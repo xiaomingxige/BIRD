@@ -240,14 +240,6 @@ class Pred_vid(object):
 if __name__ == "__main__":
     """
     python vid_predict.py
-
-    需要修改：
-    "model_path"
-    mode
-    img
-
-    "input_shape" 
-    thickness   = 1
     """
     yolo = Pred_vid()
     #----------------------------------------------------------------------------------------------------------#
@@ -267,8 +259,6 @@ if __name__ == "__main__":
     if mode == "predict":
         # img = './DAUB/images/test/data6/254.bmp'
         # Thanks for your attention! After the paper accept, we will open the details soon.
-
-            
 
         images = [Image.open(item) for item in clip_list]
         r_image = yolo.detect_image(images, position, crop=crop, count=count)
